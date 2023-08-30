@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: hsla(250, 47%, 87%, 0.651);
+}
+.navbar{
+    position: static;
+    width: 1800px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: azure;
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 10px;
+}
+.logo{
+    margin-right: 10px;
+    background-color: #351cc4;
+    font-weight: 300;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.logo a{
+    color: aliceblue;
+    text-decoration: none;
+}
+#srch1{
+    background-color: rgba(149, 185, 220, 0.897);
+    width: 200px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 8px;
+}
+input{
+    background: transparent;
+    outline: none;
+    border: none;
+}
+#srchlogo{
+    padding-left: 30px;
+}
+.menubar{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3%;
+    left: 50%;
+    transform: translate(-3%,-50%);
+    margin-right: 0%;
+    
+
+
+}
+.menubar li{
+    list-style: none;
+    text-align: center;
+    display: block;
+}
+.menubar li a{
+    text-decoration: none;
+    text-align: center;
+    padding: 0 90px;
+}
+
+select{
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.icon-imge{
+    height: 20px;
+    width: 20px; 
+    margin-top: 5px;
+    padding: 0%;
+    border-radius: 20px; 
+}
+
+.border{
+    border-right: 2px wheat solid;
+}
+.try{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    text-decoration: underline;
+    border-left: 2px blue solid;
+    padding-left: 20px;
+    color: #d3933f;
+}
+.free{
+    text-decoration: underline;
+    border-left: 2px blue solid;
+    color: #d3933f;
+}
+.container{
+    padding: 20px 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+                                                    /* ....left-panel....start... */ 
+.Left-panel{
+    flex-basis: 25%;
+    position: static;
+    align-self: flex-start;
+    /* margin-bottom: 120px; */
+    padding-left: 10px;
+}
+.sidebar-profle-box{
+    background-color: #ffffff;
+    width: 290px;
+    height: 542px;
+}
+.sidebar-profle{
+    padding: 0 100px;
+
+}
+#name{
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 80px;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    width:  100%;
+}
+.cource h6{
+    padding: 0 25px;
+    align-items: center;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.76);
+}
+.sidebar-profle img{
+    width: 90px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 4px;
+    margin-top: -45px;
+}
+hr{
+    margin-top: 4px;
+}
+.sidebar-profle-content h1{
+    font-size: 10px;
+    font-weight: 800;
+    color:#000;
+}
+#viewed{
+    font-size: 20px;
+    font-weight: 500;
+}
+#viewed span{
+    font-size: 15px;
+    font-weight: 900;
+}
+.sidebar-profle-content ul{
+    list-style: none;
+    margin: 20px 0;
+    margin-left: 10px;
+}
+.sidebar-profle-content ul li{
+    width: 100%;
+    margin: 10px 0;
+    font-size: 15px;
+}
+.sidebar-profle-content ul li .Connections{
+    float: right;
+    color: #1bac1be0;
+    font-weight: 900;
+    margin-right: 6px;
+}
+.sidebar-profle-content ul li .Connections2{
+    float: right;
+    color: #1bac1be0;
+    font-weight: 900;
+    margin-right: 6px;
+}
+.sidebar-profle-content ul li .Connections3{
+    /* float: right; */
+    /* color: #1bac1be0; */
+    font-weight: 900;
+}
+.sidebar-profle-content ul li h5{
+    font-size: 15px;
+    font-weight: 800;
+    color: #000;
+    text-decoration: line-through;
+}
+.item{
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bookmark{
+    margin-right: 10px;
+}
+.my{
+    font-size: 600;
+}
+                                                  /* ....sidebar-activity..... */
+.sidebar-activity{
+    background-color: #fff;
+    padding: 5px 25px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.sidebar-activity h3{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+.sidebar-activity a{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000000;
+    text-decoration: none;
+    margin: 3px 0;
+}
+.sidebar-activity a img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+#group{
+    color: #0000ffc0;
+}
+#group2{
+    color: #0000ffc0;
+}
+
+                                              /* ........main-panel...start..... */
+.Main-panel{
+    flex-basis: 47%;
+    align-self: flex-start;
+    padding-right: 100px;
+    
+}
+                                                    /* create-post */
+.create-post{
+    background: #f7f6f6;
+}
+                                                /* .create-post-input */
+.create-post-input{
+    padding: 20px 25px 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.create-post-input img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    
+   
+}
+.create-post-input textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    resize: none;
+    background: transparent;
+    margin-top: 8px;
+} 
+                                                   /* /* creat-post-link ........./*                                                 */
+
+ .creat-post-link{
+    display: flex;
+    align-items: flex-start;
+ }                                                  
+ .creat-post-link li{
+    list-style: none;
+    border-top: 1px solid #ccc;
+    border-radius: 1px solid #ccc;
+    flex-basis: 25%;
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+ }
+ .creat-post-link img{
+    width: 20px;
+    height: 20px;
+   
+ }
+                                                           /* post */
+ .post{
+    background: #fff;
+    padding: 20px 25px 5px;
+    margin: 5px 0 15px;
+    
+ }
+ .post-author{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+ }
+ .post-author h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+ }
+ .post-author small{
+    display: block;
+    margin-bottom: 2px;
+ }
+ #isroimage{
+    width:50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 5px;
+ }
+                                        /* ..........right-panel.start...... */
+
+.Right-panel{
+    flex-basis: 25%;
+    align-self: flex-start;
+
+}
+                                               /* sidebar-news */
+.sidebar-news{
+    background: #fff;
+    padding: 10px 25px;
+    border: 5px hsla(0, 0%, 100%, 0.849) solid;
+    border-radius: 5px;
+    margin: 12px;
+}
+.sidebar-news a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: list-item;
+    display: block;
+    font-size: 18px;
+    font-weight: 530;
+    margin-top: 10px;
+    margin-bottom: -5px;
+
+}
+.info-icon{
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top: 10px;
+}
+.sidebar-news h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: hwb(0 8% 91%);
+    margin: 5px 0 10px;
+}
+.sidebar-news span{
+    font-size: 12px;
+}
+                                                   /* most-news */
+.most-news{
+    background: #fff;
+    padding: 10px 25px;
+    border: 2px hsla(0, 0%, 100%, 0.788);
+    border-radius: 10px;}
+.most-news a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: list-item;
+    display: block;
+    font-size: 18px;
+    font-weight: 530;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+.most-news h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: hwb(0 8% 91%);
+    margin: 5px 0 10px;
+}
+.most-news span{
+    font-size: 12px;
+}
+                                                         /* your-feed  */
+.your-feed{
+    background: #fff;
+    padding: 10px 25px;
+    border: 2px hsla(0, 0%, 100%, 0.788);
+    border-radius: 10px;
+    margin: 12px;
+}
+.your-feed h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: hwb(0 8% 91%);
+    margin: 5px 0 5px;
+}
+.link-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.link-icon-M{
+    width: 70px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+#myntra{
+    margin-left: -20px;
+   
+}
+.your-feed a{
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000000;
+}
+.your-feed span{
+    margin-left: 40px;
+}
+#sspan{
+    margin-left: 50px;}
+
+    </style>
+    <script src="https://kit.fontawesome.com/79bf1bd373.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <div class="logo"><a href=""><h1>In</h1></a></div>
+            <div id="srch1"><i class="fa-solid fa-magnifying-glass" id="srchlogo"></i><input type="search" name="" id="srch2" placeholder="Search"></div>
+        </div>
+        <div class="center">
+            <ul class="menubar">
+                <li>
+                    <a href="">
+                        <div class="icon">
+                            <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+                        </div>
+                        <div class="name">Home</div>
+                       
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <div class="name">My Network</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="name">Jobs</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <div class="name">Massaging</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <div class="name">Notification</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div>
+                            <img src="image.png" alt="" class="icon-imge">
+                        </div>
+                        <div class="name">Me<select name="" id=""></select></div>
+                    </a>
+                    <li>
+                        <a href="">
+                            <!-- <div class="text">
+                                Try Premimum for
+                            </div>
+                            <div class="free">free</div> -->
+                        </a>
+                    </li>
+            </ul>
+        </div>
+       
+    </nav>
+                                       <!----Navbar-End----->
+    <div class="container">
+        <!-- Left-panel -->
+        <div class="Left-panel">
+
+            <div class="sidebar-profle-box">
+                <img src="image.png" width="100%" height="200px">
+                <div class="sidebar-profle">
+                    <img src="kp.jpg.jpg" alt="">
+               </div>
+                <span id="name">Shekhar Lokhande</span>
+                <div class="cource">
+                    <h6>Full stack Web developer</h6>
+                </div><hr>    
+                <div class="sidebar-profle-content">
+                    <ul>
+                        <li>Connections <span class="Connections">30</span></li>
+                        <li>
+                            <!-- <h5>Grow your network</h5> -->
+                        </li>
+                        <li id="viewed">Who viewed your profile<span class="Connections2">30</span></li><hr>
+                    </ul>
+                   <div class="item"><span class="bookmark"><i class="fa-solid fa-bookmark"></i></span> <span class="my">My items</span></div>
+                </div>
+            <div class="sidebar-activity">
+                <h3>RECENT</h3>
+                <a href="#"><i class="fa-sharp fa-regular fa-hashtag"></i>Web Development</a>
+                <a href=""><i class="fa-sharp fa-regular fa-hashtag"></i>Front-End</a>
+                <a href=""><i class="fa-sharp fa-regular fa-hashtag"></i> Back-End</a>
+                <a href=""><i class="fa-sharp fa-regular fa-hashtag"></i>Freelancer</a>
+                <a href=""><i class="fa-sharp fa-regular fa-hashtag"></i>Tensorflow</a>
+                <h3 id="group">GROUPS</h3>
+                <a href="#"><i class="fa-sharp fa-regular fa-hashtag"></i>Group Bussiness</a>
+                <a href=""><i class="fa-sharp fa-regular fa-hashtag"></i>Group Bussiness</a>
+                <H3 id="group2">HASHTAG</H3>
+                <a href="#"><i class="fa-sharp fa-regular fa-hashtag"></i> full stack Web Development</a>
+                <a href=""><i class="fa-sharp fa-regular fa-hashtag"></i>Bussiness Manegement</a>
+                <a href=""><i class="fa-sharp fa-regular fa-hashtag"></i>Onlinelearing</a>
+            </div>
+        </div>
+        </div>
+        <!-- main-panel -->
+        <div class="Main-panel">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="kp.jpg.jpg" alt="">
+                    <textarea  rows="2" placeholder="Write a post"></textarea>
+                </div>
+                <div class="creat-post-link">
+                    <li><i class="fa-regular fa-image"></i>Photo</li>
+                    <li><i class="fa-solid fa-video"></i>Video</li>
+                    <li><i class="fa-regular fa-calendar"></i>Events</li>
+                    <li><i class="fa-regular fa-newspaper"></i>Write Artical</li>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="https://download.logo.wine/logo/Indian_Space_Research_Organisation/Indian_Space_Research_Organisation-Logo.wine.png"  id="isroimage">
+                    <div>
+                        <h1>Isro-Recruitment</h1>
+                        <small>ISRO Scientist Recruitment 2023 Notification Out â€“ Apply Online</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>ISRO Scientist Recruitment 2023: Indian Space Research Organization (ISRO) has released a notification for the recruitment of Scientists / Engineers `SCâ€™ in Civil, Electrical, Refrigeration & A/C, and Architecture. Eligible candidates can apply online from the official website of ISRO i.e. www.isro.gov.in.</p>
+                <img src="https://wallpaperaccess.com/full/3517452.jpg" width="100%" >
+            </div>
+        </div>
+        <!-- Right-panel -->
+        <div class="Right-panel">
+            <div class="sidebar-news">
+                <!-- <img src="icon.jpg.jpeg" class="info-icon" alt=""> -->
+                
+                <h1>Linkedin News</h1>
+                <a href="#">Indian croses 3,58,974 daily cases </a>
+                <span>10h ago-5,043 readers</span>
+                <a href="#">Zomato files for $1.18 IPO</a>
+                <span>13H AGO-52,043 readers</span>
+                <a href="#">jobs pay,in IT soar</a>
+                <span>id ago-7865 readers</span>
+                <a href="#">Google saving $1B a year from WFH</a>
+                <span>2d ago.7865 readers</span>
+            </div>
+            <div class="most-news">
+                <!-- <img src="icon.jpg.jpeg" class="info-icon" alt=""> -->
+                
+                <h1>Today's Most viewed</h1>
+                <a href="#">Indian croses 3,58,974 daily cases </a>
+                <span>Top news 9874-reviews</span>
+                <a href="#">Zomato files for $1.18 IPO</a>
+                <span>Most News 1 min ago 52,043 reviews</span>
+            </div>
+            <div class="your-feed">
+                <!-- <img src="icon.jpg.jpeg" class="info-icon" alt=""> -->
+                <h1>Today's Most viewed</h1>
+                <a href="#"><img src="https://tse1.mm.bing.net/th?id=OIP.o8RLIksVoHURqM8QbDL0GAHaIO&pid=Api&P=0&h=180" class="link-icon"><h1>Unilever</h1></a>
+                <span>Company-Consuumer Goods</span>
+                <a href="#"><img src="https://tse4.mm.bing.net/th?id=OIP.8OUQAzOlhtNkOtZIHKd_lwHaHa&pid=Api&P=0&h=180" class="link-icon" alt=""><h1>Linkedin</h1></a>
+                <span>Company-Internet</span>
+                <a href="#"><img src="https://tse1.mm.bing.net/th?id=OIP.NIYR1WW2o_00XRNroTdbvQHaFj&pid=Api&P=0&h=180" class="link-icon-M" alt=""><h1 id="myntra">Myntra</h1></a>
+                <span id="sspan">id ago-7865 readers</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
